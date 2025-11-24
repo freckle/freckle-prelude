@@ -1,6 +1,7 @@
 resolver: lts-21.25
 
 extra-deps:
+  - freckle-exception-0.0.0.0
   - hspec-2.11.10
   - hspec-api-2.11.10
   - hspec-core-2.11.10
