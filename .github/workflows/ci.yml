@@ -13,7 +13,7 @@ jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - id: generate
         uses: freckle/stack-action/generate-matrix@v5
     outputs:
