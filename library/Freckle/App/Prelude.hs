@@ -92,8 +92,7 @@ module Freckle.App.Prelude
 
     -- * Exceptions
   , throwM
-  , throwString
-  , fromJustNoteM
+  , throw
   , catch
   , catchJust
   , catches
@@ -113,6 +112,9 @@ module Freckle.App.Prelude
 
 import Prelude hiding
   ( cycle
+  , error
+  , errorWithoutStackTrace
+  , fail
   , foldl1
   , foldr1
   , head
@@ -131,6 +133,7 @@ import Prelude hiding
 -- Commonly used types (and their commonly used functions)
 
 import Control.Applicative (Alternative, liftA2, optional, (<|>))
+import Control.Exception (throw)
 import Control.Monad.IO.Class (liftIO)
 import Control.Monad.Primitive (PrimMonad)
 import Control.Monad.Reader (MonadReader, ReaderT)
